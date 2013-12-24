@@ -28,7 +28,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 group :test do
-  gem 'rspec'
+  gem 'rspec-rails'
 end
 
 group :doc do
