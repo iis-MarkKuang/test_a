@@ -12,6 +12,7 @@ describe Document do
         existing = Description.create(user_id: user)
         new_description = document.descriptions.build(user_id: user)
         expect(document).to be_invalid
+        expect{ document.save }.to_not change(Document, :count)
       end
     end
     context "for a new document" do
@@ -20,6 +21,7 @@ describe Document do
         existing = Description.create(user_id: user)
         new_description = document.descriptions.build(user_id: user)
         expect(document).to be_invalid
+        expect{ document.save }.to_not change(Document, :count)
       end
     end
   end
