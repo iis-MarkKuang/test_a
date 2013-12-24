@@ -3,6 +3,8 @@ class Description < ActiveRecord::Base
   belongs_to :product
   belongs_to :document
 
+  validates_associated :user, :product, :document
+
   validate :user_limit
   
   def user_limit
